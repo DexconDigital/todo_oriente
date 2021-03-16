@@ -72,7 +72,7 @@
 </head>
 
 <body class="default">
-<?php
+    <?php
     $codigo = $_GET["dt"];
 ?>
     <header class="row">
@@ -87,9 +87,9 @@
                         <ul class="list-inline">
                             <li><a href="https://www.instagram.com/inmobiliariatodooriente/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100013773819965" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i  class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
-                            <li><a href="#"><i  class="fa fa-phone"></i> (+57) 4443162</a></li>
-                            <li><a href="#"><i  class="fa fa-map-marker"></i> Km. 8.5 Mall Complex Carulla Llano Grande Local 25-Rionegro Antioquia</a></li>
+                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> (+57) 557 79 02</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i> Calle 47 # 76 02 Rio del Este Parque Comercial en Rionegro Antioquia.</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,9 +100,9 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavigation">
-                                        <i  class="fa fa-bars"></i> Menu
-                                    </button>
-                    <a class="navbar-brand" href="index.html"><img  src="images/logos/logo.png" alt=""></a>
+                        <i class="fa fa-bars"></i> Menu
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo.png" alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -158,7 +158,7 @@
                     <div class="row m0 listing_details">
                         <div class="info_content row m0">
                             <div class="row m0 imageRow">
-                            <div id="mycarousel" class="owl-carousel owl-theme"></div>
+                                <div id="mycarousel" class="owl-carousel owl-theme"></div>
                                 <div class="saleTag" id="saleTag"></div>
                                 <div class="saleTag" style="left: 10px;display: inline-table;">
                                     <span id="tipoI"></span>
@@ -167,10 +167,10 @@
                             <div class="row m0 description">
                                 <div class="row m0">
                                     <div class="row m0 priceRow">
-                                       
+
                                     </div>
                                     <h4 class="location"></h4>
-  <a href="#" class="detail_page_specify_btn specify_btn" id="margin-movil"> <span id="precio"></span></a>
+                                    <a href="#" class="detail_page_specify_btn specify_btn" id="margin-movil"> <span id="precio"></span></a>
                                     <a href="#" class="detail_page_specify_btn specify_btn"><i class="fa fa-arrows-alt"></i> <span id="construccion"></span>m<sup>2</sup></a>
                                     <a href="#" class="detail_page_specify_btn specify_btn"><i class="fa fa-bed"></i><span id="habitaciones"></span> alcobas</a>
                                     <a href="#" class="detail_page_specify_btn specify_btn"><i class="fa fa-bath"></i><span id="banos"></span> baños</a>
@@ -236,11 +236,12 @@
                 </div>
                 <div class="col-sm-4 widget aboutWidget">
                     <div class="row m0 widgetInner">
-                        <a href="index.html"><img  src="images/logos/footer.png" alt=""></a>
-                        <p>"Somos un equipo de trabajo profesional con vocación de servicio al 
-cliente, con más de 8 años de experiencia en sabaneta Antioquia dónde 
-nuestro nombre como respaldo se denominaba Inmobiliaria Punto Sur y desde el 2016 en 
-el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></p>
+                        <a href="index.html"><img src="images/logos/footer.png" alt=""></a>
+                        <p> Somos un equipo de trabajo profesional con
+                            vocación de servicio al cliente. Desde 2016
+                            prestamos nuestro servicio inmobiliario en todo
+                            el Oriente Antioqueño.<br>
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4 widget oppeningHoursWidget">
@@ -249,7 +250,7 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                         <ul class="nav">
                             <li>Llamenos</li>
                             <li>
-                                (+57) 4443162</li>
+                                (+57) 557 79 02</li>
                             <li>Envíenos un correo</li>
                             <li>gerencia@inmobiliariatodooriente.com </li>
                         </ul>
@@ -260,7 +261,6 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                 <center>
                     <div class="col-sm-12 copyright">© 2018 <a href="http://www.dexcondigital.com/" target="_blank">Dexcon Digital</a>, Todos los derechos reservados</div>
                 </center>
-
             </div>
         </div>
     </footer>
@@ -298,139 +298,142 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
     <script src="js/google-map.js"></script>
     <script src="js/similar.js"></script>
     <script src="js/notices.js"></script>
-    
+
     <?php echo "<script> var codigoInm ='" . $codigo . "';</script>"; ?>
     <script>
-    if(codigoInm != 0){
-        
-        var latitud = 0;
-        var longitud = 0;
-        $.ajax({
-            url: "http://www.simi-api.com/ApiSimiweb/response/v2/inmueble/codInmueble/" + codigoInm + "",
-            async: true,
-            type: "GET",
-            dataType: "json",
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader(
-                    "Authorization",
-                    'Basic ' + btoa('Authorization:XAZ2FaGk4qDZN5IiCFOVfMUKnptf3h2Mhhw2yfEm-874')
-                );
-            },
-            success: function(data) {
-                 console.log(data)
-                if(data.msn == "Inmueble NO Disponible"){
-                    modalOpen();
-                    return;
-                }
+        if (codigoInm != 0) {
+
+            var latitud = 0;
+            var longitud = 0;
+            $.ajax({
+                url: "http://www.simi-api.com/ApiSimiweb/response/v2/inmueble/codInmueble/" + codigoInm + "",
+                async: true,
+                type: "GET",
+                dataType: "json",
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader(
+                        "Authorization",
+                        'Basic ' + btoa('Authorization:XAZ2FaGk4qDZN5IiCFOVfMUKnptf3h2Mhhw2yfEm-874')
+                    );
+                },
+                success: function(data) {
+                    console.log(data)
+                    if (data.msn == "Inmueble NO Disponible") {
+                        modalOpen();
+                        return;
+                    }
                     var j = 1;
                     var carrousel = '';
-                    if (data.fotos == undefined  || data.fotos.length == 0) {
+                    if (data.fotos == undefined || data.fotos.length == 0) {
                         carrousel += '<div class="item active">' +
-                                '<img src="images/no_image.png" alt=""/ style="width:100%; height:500px">'+
-                                '</div>';
+                            '<img src="images/no_image.png" alt=""/ style="width:100%; height:500px">' +
+                            '</div>';
                     } else {
                         carrousel += '<div class="item active">' +
-                                '<img src="' + data.fotos[0].foto + '" alt=""/  style="width:100%; height:500px">'+
+                            '<img src="' + data.fotos[0].foto + '" alt=""/  style="width:100%; height:500px">' +
                             '</div>';
 
                         for (var y = 1; y < Object.keys(data.fotos).length - 1; y++) {
                             if (data.fotos[y].foto != undefined) {
                                 carrousel += '<div class="item">' +
-                                '<img src="' + data.fotos[y].foto + '" alt=""/ style="width:100%; height:500px">'+
+                                    '<img src="' + data.fotos[y].foto + '" alt=""/ style="width:100%; height:500px">' +
                                     '</div>';
                                 j++;
                             }
                         }
-                        if(data.video != ""){
-                             carrousel += '<div class="item">' +
-                                '<iframe width="auto" height="500" src="'+data.video+'" style="width:100%" ></iframe>'+
-                                 '</div>';
+                        if (data.video != "") {
+                            carrousel += '<div class="item">' +
+                                '<iframe width="auto" height="500" src="' + data.video + '" style="width:100%" ></iframe>' +
+                                '</div>';
                         }
                     }
 
-                 $("#mycarousel").html(carrousel);
-                 $("#mycarousel").owlCarousel({
+                    $("#mycarousel").html(carrousel);
+                    $("#mycarousel").owlCarousel({
                         items: 1,
                         loop: true,
                         margin: 10,
                         lazyLoad: true,
                         merge: true,
-                        autoplay:true,
-                        autoplayTimeout:4000,
+                        autoplay: true,
+                        autoplayTimeout: 4000,
                     });
 
 
-                $('#mycarousel').carousel();
-                $("#construccion").append(""+data.AreaConstruida);
-                $("#areal").append("Area del lote: "+data.AreaLote+" m<sup>2</sup>");
-                $("#saleTag").append(""+data.Gestion);
-                $("#habitaciones").append(" "+data.alcobas);
-                $("#banos").append(" "+data.banos);
-                $("#precio").append("$ "+data.precio);
-                $("#estrato").append("Estrato:  "+data.Estrato);
-                $("#barrio").append("Ubicación: "+data.depto+ ", "+data.barrio);
-                $("#banos2").append("Baños: "+data.banos);
-                $("#alcobas").append("Alcobas: "+data.alcobas);
-                $("#tipoI").append(""+data.Tipo_Inmueble);
-                $("#codigo").append(""+data.idInm);
-                $("#descripcion").append(""+data.descripcionlarga);
+                    $('#mycarousel').carousel();
+                    $("#construccion").append("" + data.AreaConstruida);
+                    $("#areal").append("Area del lote: " + data.AreaLote + " m<sup>2</sup>");
+                    $("#saleTag").append("" + data.Gestion);
+                    $("#habitaciones").append(" " + data.alcobas);
+                    $("#banos").append(" " + data.banos);
+                    $("#precio").append("$ " + data.precio);
+                    $("#estrato").append("Estrato:  " + data.Estrato);
+                    $("#barrio").append("Ubicación: " + data.depto + ", " + data.barrio);
+                    $("#banos2").append("Baños: " + data.banos);
+                    $("#alcobas").append("Alcobas: " + data.alcobas);
+                    $("#tipoI").append("" + data.Tipo_Inmueble);
+                    $("#codigo").append("" + data.idInm);
+                    $("#descripcion").append("" + data.descripcionlarga);
 
-                window.localStorage.setItem("codigo",data.idInm)
-                window.localStorage.setItem("gestion",data.Gestion)
-                
-                $("#ubicacion").append(data.barrio + ", " + data.ciudad + ", " + data.depto);
+                    window.localStorage.setItem("codigo", data.idInm)
+                    window.localStorage.setItem("gestion", data.Gestion)
 
-                latitud = data.latitud;
-                longitud = data.longitud;
+                    $("#ubicacion").append(data.barrio + ", " + data.ciudad + ", " + data.depto);
 
-                initMap(latitud, longitud);
-            },
-            error: function(data) {
-                console.log("Fail");
+                    latitud = data.latitud;
+                    longitud = data.longitud;
+
+                    initMap(latitud, longitud);
+                },
+                error: function(data) {
+                    console.log("Fail");
+                }
+            });
+
+            function initMap(latitud, longitud) {
+                var uluru = {
+                    lat: parseFloat(latitud),
+                    lng: parseFloat(longitud)
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
             }
-        });
-
-        function initMap(latitud, longitud) {
-            var uluru = {
-                lat: parseFloat(latitud),
-                lng: parseFloat(longitud)
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 17,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
+        } else {
+            modalOpen();
         }
-    }else{
-        modalOpen();
-    }
-    function modalOpen(){
-                $("body").append('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">'+
-                          '<div class="modal-dialog" role="document">'+
-                            '<div class="modal-content">'+
-                              '<div class="modal-header">'+
-                                '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>'+
-                                '<h4 class="modal-title" id="myModalLabel">Modal title</h4>'+
-                              '</div>'+
-                              '<div class="modal-body">'+
-                              'El inmueble no existe en Inmobiliaria Todo Oriente'+
-                              '</div>'+
-                              '<div class="modal-footer">'+
-                                '<button type="button" class="btn btn-default" data-dismiss="modal" onclick="redirect()">Cerrar</button>'+
-                              '</div>'+
-                            '</div>'+
-                          '</div>'+
-                        '</div>');
-                        
-                    $(".modal").modal();
-                    
-    }
-    function redirect(){
-        window.location.href= "index.html";
-    }
+
+        function modalOpen() {
+            $("body").append('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
+                '<div class="modal-dialog" role="document">' +
+                '<div class="modal-content">' +
+                '<div class="modal-header">' +
+                '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>' +
+                '<h4 class="modal-title" id="myModalLabel">Modal title</h4>' +
+                '</div>' +
+                '<div class="modal-body">' +
+                'El inmueble no existe en Inmobiliaria Todo Oriente' +
+                '</div>' +
+                '<div class="modal-footer">' +
+                '<button type="button" class="btn btn-default" data-dismiss="modal" onclick="redirect()">Cerrar</button>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>');
+
+            $(".modal").modal();
+
+        }
+
+        function redirect() {
+            window.location.href = "index.html";
+        }
+
     </script>
 </body>
 

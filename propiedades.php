@@ -76,19 +76,22 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
 
 </head>
 <style>
-#inmb > .btn-group{
-    width:150px;
-}
- #code{
-     background: none #fff;
-    border-radius: 5px;
-    border: none;
-    line-height: 37px;
-    padding: 0 10px;
-    color: #b2b2b2;
-    width:90px;
- }
+    #inmb>.btn-group {
+        width: 150px;
+    }
+
+    #code {
+        background: none #fff;
+        border-radius: 5px;
+        border: none;
+        line-height: 37px;
+        padding: 0 10px;
+        color: #b2b2b2;
+        width: 90px;
+    }
+
 </style>
+
 <body class="default" onload="imprimir(1)">
 
     <header class="row">
@@ -103,9 +106,9 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                         <ul class="list-inline">
                             <li><a href="https://www.instagram.com/inmobiliariatodooriente/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100013773819965" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i  class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
-                            <li><a href="#"><i  class="fa fa-phone"></i> (+57) 4443162</a></li>
-                            <li><a href="#"><i  class="fa fa-map-marker"></i> Km. 8.5 Mall Complex Carulla Llano Grande Local 25-Rionegro Antioquia</a></li>
+                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> (+57) 557 79 02</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i> Calle 47 # 76 02 Rio del Este Parque Comercial en Rionegro Antioquia.</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,9 +119,9 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavigation">
-                                        <i  class="fa fa-bars"></i> Menu
-                                    </button>
-                    <a class="navbar-brand" href="index.html"><img  src="images/logos/logo.png" alt=""></a>
+                        <i class="fa fa-bars"></i> Menu
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo.png" alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -168,7 +171,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
 
     <section class="row">
         <div class="container">
-        <div class="searchForm media" style="margin-top:15px">
+            <div class="searchForm media" style="margin-top:15px">
                 <div class="formTitle media-left media-middle"><span>Busca </span><br>Tu inmueble</div>
 
                 <div class="media-body form_elements">
@@ -180,7 +183,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                     <div class="fleft form_element">
                         <label for="ciudad">Ciudad</label>
                         <select name="" id="ciudad" class="selectpicker propertyLocation">
-                <option value="0">Ciudad</option>
+                            <option value="0">Ciudad</option>
                         </select>
                     </div>
 
@@ -192,35 +195,35 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                     <div class="fleft form_element">
                         <label for="zona">Zona</label>
                         <select name="" id="zona" class="selectpicker propertyLocation">
-                                <option value="0">Zona</option>
+                            <option value="0">Zona</option>
                         </select>
                     </div>
                     <div class="fleft form_element">
                         <label for="price">Precio</label>
                         <select name="" id="price" class="selectpicker propertyLocation">
-                                <option value="0">precio</option>
-                               <option value="1">$        500.000 a  $        1.000.000</option>
-                               <option value="2">$     1.000.001 a  $        5.000.000</option>
-                               <option value="3">$     5.000.001 a  $        8.000.000</option>
-                               <option value="4">$     8.000.001 a  $       30.000.000</option>
-                               <option value="5">$   30.000.001 a  $       50.000.000</option>
-                               <option value="6">$   50.000.001 a  $     300.000.000</option>
-                               <option value="7">$ 300.000.001 a  $   600.000.000</option>
-                               <option value="8">$ 600.000.001 a  $  1.000.000.000</option>
-                               <option value="9">$1.000.000.001 a  $ 2.000.000.000</option>
-                               <option value="10">$2.000.000.001 a  $ 12.000.000.000</option>
+                            <option value="0">precio</option>
+                            <option value="1">$ 500.000 a $ 1.000.000</option>
+                            <option value="2">$ 1.000.001 a $ 5.000.000</option>
+                            <option value="3">$ 5.000.001 a $ 8.000.000</option>
+                            <option value="4">$ 8.000.001 a $ 30.000.000</option>
+                            <option value="5">$ 30.000.001 a $ 50.000.000</option>
+                            <option value="6">$ 50.000.001 a $ 300.000.000</option>
+                            <option value="7">$ 300.000.001 a $ 600.000.000</option>
+                            <option value="8">$ 600.000.001 a $ 1.000.000.000</option>
+                            <option value="9">$1.000.000.001 a $ 2.000.000.000</option>
+                            <option value="10">$2.000.000.001 a $ 12.000.000.000</option>
                         </select>
                     </div>
-                    
-                    <div class="fleft form_element">                            <label for="code">Código</label>
+
+                    <div class="fleft form_element"> <label for="code">Código</label>
                         <input id="code" class="codeInm" placeholder="ej :122">
                     </div>
-                    
+
                     <div class="fleft form_element">
                         <button type="submit" class="btn btn-default" id="search-1">Buscar</button>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
@@ -230,24 +233,24 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     <section class="row contentRow">
         <div class="container">
             <div class="row">
-                <div id="propiedad"></div>
-               
-                                        <div class="pagination-area mb-60">
-                                            <ul class="pagination-list text-center">
-                                                <div class="pagina" style="color:black;"></div>
-                                                <li id="anterior">
-                                                    <a href="#" id="banterior" onclick="paginator('ant')">
-                                                        <i class="fa fa-angle-left" aria-hidden="true" id="flechas"></i>
-                                                    </a>
-                                                </li>
-                                                <li id="siguiente">
-                                                    <a href="#" id="bsiguiente" onclick="paginator('sig')">
-                                                        <i class="fa fa-angle-right" aria-hidden="true" id="flechas"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-             
+                <div id="propiedad" class="row"></div>
+
+                <div class="pagination-area mb-60">
+                    <ul class="pagination-list text-center">
+                        <div class="pagina" style="color:black;"></div>
+                        <li id="anterior">
+                            <a href="#" id="banterior" onclick="paginator('ant')">
+                                <i class="fa fa-angle-left" aria-hidden="true" id="flechas"></i>
+                            </a>
+                        </li>
+                        <li id="siguiente">
+                            <a href="#" id="bsiguiente" onclick="paginator('sig')">
+                                <i class="fa fa-angle-right" aria-hidden="true" id="flechas"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -287,10 +290,11 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                 <div class="col-sm-4 widget aboutWidget">
                     <div class="row m0 widgetInner">
                         <a href="index.html"><img src="images/logos/footer.png" alt=""></a>
-                        <p>"Somos un equipo de trabajo profesional con vocación de servicio al 
-cliente, con más de 8 años de experiencia en sabaneta Antioquia dónde 
-nuestro nombre como respaldo se denominaba Inmobiliaria Punto Sur y desde el 2016 en 
-el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></p>
+                        <p> Somos un equipo de trabajo profesional con
+                            vocación de servicio al cliente. Desde 2016
+                            prestamos nuestro servicio inmobiliario en todo
+                            el Oriente Antioqueño.<br>
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4 widget oppeningHoursWidget">
@@ -299,7 +303,7 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                         <ul class="nav">
                             <li>Llámenos</li>
                             <li>
-                                (+57) 4443162</li>
+                                (+57) 557 79 02</li>
                             <li>Envíenos un correo</li>
                             <li>gerencia@inmobiliariatodooriente.com </li>
                         </ul>
@@ -310,7 +314,6 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                 <center>
                     <div class="col-sm-12 copyright">© 2018 <a href="http://www.dexcondigital.com/" target="_blank">Dexcon Digital</a>, Todos los derechos reservados</div>
                 </center>
-
             </div>
         </div>
     </footer>
@@ -347,10 +350,10 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
     <?php echo '<script>var ti = ' . $ti . '</script>'; ?>
     <?php echo '<script>var ci = ' . $ci . '</script>'; ?>
     <?php echo '<script>var zo = ' . $zo . '</script>'; ?>
-  <?php echo '<script>var pre = ' . $pre . '</script>'; ?>
+    <?php echo '<script>var pre = ' . $pre . '</script>'; ?>
 
-  <script>
-        if (typeof (Storage) !== "undefined") {
+    <script>
+        if (typeof(Storage) !== "undefined") {
             // Store
             localStorage.setItem("gs", gs);
             localStorage.setItem("ci", ci);

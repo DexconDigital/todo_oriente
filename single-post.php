@@ -6,7 +6,8 @@
 
 $codigo = $_GET["codigo"];
 
-$link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias","db_a30380_noticia");
+//$link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias","db_a30380_noticia");
+$link = mysqli_connect("localhost","root","","2018noticias");
 
     $sql = "SELECT * FROM noticias WHERE id = $codigo";
     $result = mysqli_query($link, $sql) or die(mysqli_error($link));
@@ -20,6 +21,7 @@ $link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias",
     }
 
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,9 +98,9 @@ $link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias",
                         <ul class="list-inline">
                             <li><a href="https://www.instagram.com/inmobiliariatodooriente/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100013773819965" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i  class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
-                            <li><a href="#"><i  class="fa fa-phone"></i> (+57) 4443162</a></li>
-                            <li><a href="#"><i  class="fa fa-map-marker"></i> Centro Comercial Llanogrande, Local 25 - Rionegro, Antioquia</a></li>
+                            <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> (+57) 557 79 02</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i> Calle 47 # 76 02 Rio del Este Parque Comercial en Rionegro Antioquia.</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,9 +111,9 @@ $link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias",
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavigation">
-                                        <i  class="fa fa-bars"></i> Menu
-                                    </button>
-                    <a class="navbar-brand" href="index.html"><img  src="images/logos/logo.png" alt=""></a>
+                        <i class="fa fa-bars"></i> Menu
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo.png" alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -209,10 +211,11 @@ $link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias",
                 <div class="col-sm-4 widget aboutWidget">
                     <div class="row m0 widgetInner">
                         <a href="index.html"><img src="images/logos/footer.png" alt=""></a>
-                        <p>"Somos un equipo de trabajo profesional con vocación de servicio al 
-cliente, con más de 8 años de experiencia en sabaneta Antioquia dónde 
-nuestro nombre como respaldo se denominaba Inmobiliaria Punto Sur y desde el 2016 en 
-el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></p>
+                        <p> Somos un equipo de trabajo profesional con
+                            vocación de servicio al cliente. Desde 2016
+                            prestamos nuestro servicio inmobiliario en todo
+                            el Oriente Antioqueño.<br>
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-4 widget oppeningHoursWidget">
@@ -221,7 +224,7 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                         <ul class="nav">
                             <li>Llamenos</li>
                             <li>
-                                (+57) 4443162</li>
+                                (+57) 557 79 02</li>
                             <li>Envíenos un correo</li>
                             <li>gerencia@inmobiliariatodooriente.com </li>
                         </ul>
@@ -232,7 +235,6 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
                 <center>
                     <div class="col-sm-12 copyright">© 2018 <a href="http://www.dexcondigital.com/" target="_blank">Dexcon Digital</a>, Todos los derechos reservados</div>
                 </center>
-
             </div>
         </div>
     </footer>
@@ -265,7 +267,7 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
     <script src="js/estate-pro.js"></script>
     <script src="js/notices.js"></script>
 
-        <!--asignacion de valores a variables js-->
+    <!--asignacion de valores a variables js-->
     <?php echo "<script>var titulo =' " . $nombre . "'</script>"; ?>
     <?php echo "<script>var id =' " . $id . "'</script>"; ?>
     <?php echo "<script>var descripcion =' " . $descripcion . "'</script>"; ?>
@@ -275,23 +277,24 @@ el Oriente de Antioquia somos reconocidos como Inmobiliaria Todo Oriente."<br></
     <?php echo "<script> var mes = ".date('m', $fecha_complete)."</script>";?>
     <?php echo "<script> var dia = ".date('d', $fecha_complete)."</script>";?>
     <script>
-        var imagen = 'todo-oriente-noticias//admin/'+imagen+'';
+        var imagen = 'todo-oriente-noticias//admin/' + imagen + '';
 
         imagen = imagen.replace(/\s/g, '');
 
-        var noticia = '<div class="row m0 single_blog">'+
-                        '<img src="'+imagen+'" alt="Single Blog - Feature Image" class="img-responsive featureImg">'+
-                        '<div class="row m0 post_meta">'+
-                            '<a href="#"><i class="fa fa-calendar"></i>' +año+"-"+mes+"-"+dia+'</a>'+
-                        '</div>'+
-                        '<div class="post_desc">'+
-                            '<h4 class="blogTitle">'+titulo+'</h4>'+
-                            '<p>'+noticia+'</p>'+
-                        '</div>'+
-                    '</div>';
+        var noticia = '<div class="row m0 single_blog">' +
+            '<img src="' + imagen + '" alt="Single Blog - Feature Image" class="img-responsive featureImg">' +
+            '<div class="row m0 post_meta">' +
+            '<a href="#"><i class="fa fa-calendar"></i>' + año + "-" + mes + "-" + dia + '</a>' +
+            '</div>' +
+            '<div class="post_desc">' +
+            '<h4 class="blogTitle">' + titulo + '</h4>' +
+            '<p>' + noticia + '</p>' +
+            '</div>' +
+            '</div>';
 
         $("#noticia").html(noticia);
-        </script>
+
+    </script>
 </body>
 
 <!-- Mirrored from premiumlayers.net/demo/html/estatepro/single-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Mar 2018 15:21:42 GMT -->
