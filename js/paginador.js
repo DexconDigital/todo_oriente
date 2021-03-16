@@ -34,7 +34,7 @@ function imprimir(count) {
             },
             'dataType': "json",
             success: function (data) {
-                console.log(data)
+                //console.log(data.Inmuebles)
 
                 if (data == "Sin resultados") {
                     res += '<div class="alert alert-danger"><h4>No hay Inmuebles </h4></div>';
@@ -42,10 +42,16 @@ function imprimir(count) {
                     return;
 
                 } else {
-
+                    
 
                     localStorage.setItem("total", data.datosGrales.fin - 1);
-
+                    
+                    //ordenar por precio
+                    data.Inmuebles.sort(function (a, b) {
+                        return parseFloat(a.valorFiltro.replace(/[^\d\.\-]/g, "")) - parseFloat(b.valorFiltro.replace(/[^\d\.\-]/g, ""));
+                    });
+                    //console.log(data);
+                    
                     var res = " ";
                  
                     for (var pos = 0; pos < data.Inmuebles.length; pos++) {
@@ -77,7 +83,7 @@ function imprimir(count) {
                             '</div>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
                             '<h4 class="location">' + data.Inmuebles[pos].Barrio + '</h4>' +
-                            '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: ' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
+                            '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
                             '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                             '</a>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-arrows-alt"></i>' + data.Inmuebles[pos].AreaConstruida + 'm<sup>2</sup></a>' +
@@ -86,8 +92,6 @@ function imprimir(count) {
                             '</div>' +
                             '</div>' +
                             '</div>';
-
-
 
                     }
 
@@ -147,8 +151,6 @@ function imprimir(count) {
             },
             'dataType': "json",
             success: function (data) {
-                console.log(data)
-
                 var res = " ";
                 if (data == "Sin resultados") {
                     res += '<div class="alert alert-danger"><h4>No hay Inmuebles </h4></div>';
@@ -158,6 +160,10 @@ function imprimir(count) {
                     return;
 
                 } else {
+                    //ordenar por precio
+                    data.Inmuebles.sort(function (a, b) {
+                        return parseFloat(a.valorFiltro.replace(/[^\d\.\-]/g, "")) - parseFloat(b.valorFiltro.replace(/[^\d\.\-]/g, ""));
+                    });
                     localStorage.setItem("total", data.datosGrales.fin);
                     localStorage.setItem("inicio", data.datosGrales.inicio);
                     localStorage.setItem("actual", data.datosGrales.pagina_actual);
@@ -192,7 +198,7 @@ function imprimir(count) {
                                 '</div>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
                                 '<h4 class="location">' + data.Inmuebles[pos].Barrio + '</h4>' +
-                                '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: ' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
+                                '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
                                 '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                                 '</a>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-arrows-alt"></i>' + data.Inmuebles[pos].AreaConstruida + 'm<sup>2</sup></a>' +
