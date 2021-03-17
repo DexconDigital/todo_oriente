@@ -1,5 +1,5 @@
 function paginator(actual) {
-
+    $("#propiedad").html('<div class="container"><h3>Cargando...</h3></div>');
     let position = 0;
     if (position != 0) {
         position = localStorage.getItem("total");
@@ -16,7 +16,6 @@ function paginator(actual) {
         localStorage.setItem("count", count);
         imprimir(count);
     }
-
 }
 
 function imprimir(count) {
@@ -42,18 +41,18 @@ function imprimir(count) {
                     return;
 
                 } else {
-                    
+
 
                     localStorage.setItem("total", data.datosGrales.fin - 1);
-                    
+
                     //ordenar por precio
                     data.Inmuebles.sort(function (a, b) {
                         return parseFloat(a.valorFiltro.replace(/[^\d\.\-]/g, "")) - parseFloat(b.valorFiltro.replace(/[^\d\.\-]/g, ""));
                     });
                     //console.log(data);
-                    
+
                     var res = " ";
-                 
+
                     for (var pos = 0; pos < data.Inmuebles.length; pos++) {
                         res += '<div class="col-sm-6 col-xs-12 col-md-4 listing_grid">' +
                             '<div class="info_content row">' +
@@ -67,8 +66,7 @@ function imprimir(count) {
 
                         if (data.Inmuebles[pos].Gestion == "Venta") {
                             res += '<div class="saleTag">Venta</div>';
-                        }
-                        else {
+                        } else {
                             res += '<div class="saleTag rentTag">' + data.Inmuebles[pos].Gestion + '</div>';
                         }
                         res += '</a></div>' +
@@ -82,7 +80,7 @@ function imprimir(count) {
                         res += '<i class="fa fa-file-text-o"></i>' +
                             '</div>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
-                            '<h4 class="location">' + data.Inmuebles[pos].Barrio + '</h4>' +
+                            '<h4 class="location h-5">' + data.Inmuebles[pos].Barrio + '</h4>' +
                             '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
                             '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                             '</a>' +
@@ -94,18 +92,20 @@ function imprimir(count) {
                             '</div>';
 
                     }
-
-
                     $(".pagina").html("pagina " + data.datosGrales.pagina_actual + " de " + localStorage.getItem("total"));
+                    var anterior = $("#anterior");
+                    var siguiente = $("#siguiente");
+                    (data.datosGrales.pagina_actual <= 1) ? anterior.css("display", "none"): anterior.css("display", "inline-flex");
+                    (data.datosGrales.pagina_actual == localStorage.getItem("total")) ? siguiente.css("display", "none"): siguiente.css("display", "inline-flex");
                 }
                 $("#propiedad").html(res)
-
             }
 
         });
-        validar()
+
     } else {
-        var min = 0, max = 0;
+        var min = 0,
+            max = 0;
         if (localStorage.getItem("pre") == 0) {
             min = 0;
             max = 0;
@@ -182,8 +182,7 @@ function imprimir(count) {
 
                             if (data.Inmuebles[pos].Gestion == "Venta") {
                                 res += '<div class="saleTag">Venta</div>';
-                            }
-                            else {
+                            } else {
                                 res += '<div class="saleTag rentTag">' + data.Inmuebles[pos].Gestion + '</div>';
                             }
                             res += '</a></div>' +
@@ -197,7 +196,7 @@ function imprimir(count) {
                             res += '<i class="fa fa-file-text-o"></i>' +
                                 '</div>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
-                                '<h4 class="location">' + data.Inmuebles[pos].Barrio + '</h4>' +
+                                '<h4 class="location h-5">' + data.Inmuebles[pos].Barrio + '</h4>' +
                                 '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
                                 '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                                 '</a>' +
@@ -215,35 +214,13 @@ function imprimir(count) {
                     } else {
                         $(".pagina").html("pagina " + data.datosGrales.pagina_actual + " de " + localStorage.getItem("total"))
                     }
-                    validar();
+                    var anterior = $("#anterior");
+                    var siguiente = $("#siguiente");
+                    (data.datosGrales.pagina_actual <= 1) ? anterior.css("display", "none"): anterior.css("display", "inline-flex");
+                    (data.datosGrales.pagina_actual == localStorage.getItem("total")) ? siguiente.css("display", "none"): siguiente.css("display", "inline-flex");
                 }
-
                 $("#propiedad").html(res)
-
             }
-
         });
-
-
     }
 }
-
-function validar() {
-    console.log(localStorage.getItem("total"))
-    if (localStorage.getItem("total") == localStorage.getItem("actual")) {
-        console.log(1)
-        $("#siguiente").css("display", "none");
-    } else {
-        console.log(2)
-        $("#siguiente").css("display", "inline-flex");
-    }
-
-    if (localStorage.getItem("actual") != 1) {
-        $("#anterior").css("display", "inline-flex");
-    } else {
-
-        $("#anterior").css("display", "none");
-    }
-}
-
-
