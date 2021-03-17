@@ -13,7 +13,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     $ti = $_GET["ti"];
     $ci = $_GET["ci"];
     $zo = $_GET["zo"];
-   $pre = $_GET["pre"];
+    $pre = $_GET["pre"];
 }
 ?>
 
@@ -107,7 +107,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                             <li><a href="https://www.instagram.com/inmobiliariatodooriente/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100013773819965" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> (+57) 557 79 02</a></li>
+                            <li><a href="tel:0345577902"><i class="fa fa-phone"></i> (034) 557 79 02</a></li>
                             <li><a href="#"><i class="fa fa-map-marker"></i> Calle 47 # 76 02 Rio del Este Parque Comercial en Rionegro Antioquia.</a></li>
                         </ul>
                     </div>
@@ -201,7 +201,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                     <div class="fleft form_element">
                         <label for="price">Precio</label>
                         <select name="" id="price" class="selectpicker propertyLocation">
-                            <option value="0">precio</option>
+                            <option value="0" class="holasdasd">precio</option>
                             <option value="1">$ 500.000 a $ 1.000.000</option>
                             <option value="2">$ 1.000.001 a $ 5.000.000</option>
                             <option value="3">$ 5.000.001 a $ 8.000.000</option>
@@ -233,17 +233,22 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     <section class="row contentRow">
         <div class="container">
             <div class="row">
-                <div id="propiedad" class="row"></div>
-
+                <!--Catálogos-->
+                <div id="propiedad" class="row">
+                    <div class="container">
+                        <h3>Cargando...</h3>
+                    </div>
+                </div>
+                <!--Catálogos-->
                 <div class="pagination-area mb-60">
-                    <ul class="pagination-list text-center">
+                    <ul class="list-inline text-center">
                         <div class="pagina" style="color:black;"></div>
-                        <li id="anterior">
+                        <li id="anterior" style="display:none;">
                             <a href="#" id="banterior" onclick="paginator('ant')">
                                 <i class="fa fa-angle-left" aria-hidden="true" id="flechas"></i>
                             </a>
                         </li>
-                        <li id="siguiente">
+                        <li id="siguiente" style="display:none;">
                             <a href="#" id="bsiguiente" onclick="paginator('sig')">
                                 <i class="fa fa-angle-right" aria-hidden="true" id="flechas"></i>
                             </a>
@@ -302,13 +307,12 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                         <h4 class="widgetTitle">Contáctenos</h4>
                         <ul class="nav">
                             <li>Llámenos</li>
-                            <li>
-                                (+57) 557 79 02</li>
+                            <li><a class="p-0 no-hover text-light" href="tel:0345577902" >(034) 557 79 02</a></li>
                             <li>Envíenos un correo</li>
-                            <li>gerencia@inmobiliariatodooriente.com </li>
+                            <li><a class="p-0 no-hover text-light" href="mailto:gerencia@inmobiliariatodooriente.com">gerencia@inmobiliariatodooriente.com</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> 
             </div>
             <div class="copyrightRow row">
                 <center>

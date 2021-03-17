@@ -7,7 +7,8 @@
 $codigo = $_GET["codigo"];
 
 //$link = mysqli_connect("MYSQL7003.site4now.net","a30380_noticia","2018noticias","db_a30380_noticia");
-$link = mysqli_connect("localhost","root","","2018noticias");
+//$link = mysqli_connect("localhost","root","","2018noticias");
+$link = mysqli_connect("50.62.209.73:3306","todooriente_user","nosequeponer123","TodoOriente_noticias");
 
     $sql = "SELECT * FROM noticias WHERE id = $codigo";
     $result = mysqli_query($link, $sql) or die(mysqli_error($link));
@@ -99,7 +100,7 @@ $link = mysqli_connect("localhost","root","","2018noticias");
                             <li><a href="https://www.instagram.com/inmobiliariatodooriente/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100013773819965" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="mailto:gerencia@inmobiliariatodooriente.com "><i class="fa fa-envelope-o"></i>gerencia@inmobiliariatodooriente.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> (+57) 557 79 02</a></li>
+                            <li><a href="tel:0345577902"><i class="fa fa-phone"></i> (034) 557 79 02</a></li>
                             <li><a href="#"><i class="fa fa-map-marker"></i> Calle 47 # 76 02 Rio del Este Parque Comercial en Rionegro Antioquia.</a></li>
                         </ul>
                     </div>
@@ -222,11 +223,10 @@ $link = mysqli_connect("localhost","root","","2018noticias");
                     <div class="row m0 widgetInner">
                         <h4 class="widgetTitle">Contáctenos</h4>
                         <ul class="nav">
-                            <li>Llamenos</li>
-                            <li>
-                                (+57) 557 79 02</li>
+                            <li>Llámenos</li>
+                            <li><a class="p-0 no-hover text-light" href="tel:0345577902" >(034) 557 79 02</a></li>
                             <li>Envíenos un correo</li>
-                            <li>gerencia@inmobiliariatodooriente.com </li>
+                            <li><a class="p-0 no-hover text-light" href="mailto:gerencia@inmobiliariatodooriente.com">gerencia@inmobiliariatodooriente.com</a></li>
                         </ul>
                     </div>
                 </div>
