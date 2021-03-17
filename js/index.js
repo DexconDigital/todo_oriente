@@ -10,6 +10,7 @@ setTimeout(function() {
         },
         'dataType': "json",
         success: function(data) {
+            $("#property").empty();
             var res = "";
             if (data == "Sin resultados") {
                 res += '<h1 style="color:white"> No hay Inmuebles destacados </h1>';
