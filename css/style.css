@@ -2938,13 +2938,41 @@ body.default #target {
     color: white;
 }
 
+.no-hover-dark {
+    background-color: transparent !important;
+    color: #333;
+}
+
 .no-hover:hover,
 .no-hover:focus {
     color: white;
+}
+
+.no-hover-dark:hover,
+.no-hover-dark:focus {
+    color: #333;
 }
 
 .h-5 {
     height: 5.5vh !important;
 }
 
+.w-5 {
+    width: 150rem !important;
+    height: 25rem !important;
+}
 
+.justify-content-center {
+    justify-content: center !important;
+}
+
+@media (min-width: 1100px) {
+    .img-responsive.card {
+        height: 417px;
+    }
+
+    .padding-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
