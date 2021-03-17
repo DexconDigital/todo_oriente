@@ -39,8 +39,8 @@
  28. Shortcodes & Classes
 ----------------------------------------------------*/
 
-html{
-    overflow-x:hidden;
+html {
+    overflow-x: hidden;
 }
 
 body.default {
@@ -90,10 +90,11 @@ body.default .pt70 {
 @media (min-width: 1200px) {
     body.default .container {
         width: 1200px;
-        
+
     }
 }
-h2{
+
+h2 {
     font-size: 28px;
 }
 
@@ -275,7 +276,7 @@ body.default header .topHeader .top_menu .list-inline li .filterGroup ul li {
     padding: 0;
 }
 
-body.default header .topHeader .top_menu .list-inline li .filterGroup ul li+li {
+body.default header .topHeader .top_menu .list-inline li .filterGroup ul li + li {
     border-top: 1px solid rgba(133, 154, 179, 0.3);
 }
 
@@ -317,7 +318,7 @@ body.default header .navbar {
     -webkit-box-shadow: none;
     box-shadow: none;
     background: none #323232;
-   z-index:0
+    z-index: 0
 }
 
 body.default header .navbar .navbar-header {
@@ -394,9 +395,9 @@ body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li a:hov
     color: #ffca00;
 }
 
-body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu li+li,
-body.default header .navbar #mainNavigation .nav li.active .dropdown-menu li+li,
-body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li+li {
+body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu li + li,
+body.default header .navbar #mainNavigation .nav li.active .dropdown-menu li + li,
+body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li + li {
     border-top: 1px solid rgba(27, 155, 255, 0.3);
 }
 
@@ -552,7 +553,7 @@ body.default .info_content .description .specify_btn {
     display: inline-block;
 }
 
-body.default .info_content .description .specify_btn+.specify_btn {
+body.default .info_content .description .specify_btn + .specify_btn {
     margin-left: 10px;
 }
 
@@ -665,7 +666,7 @@ body.default .searchForm .form_elements .form_element {
     padding-left: 10px;
 }
 
-body.default .searchForm .form_elements .form_element+.form_element {
+body.default .searchForm .form_elements .form_element + .form_element {
     padding-left: 10px;
 }
 
@@ -835,7 +836,7 @@ body.default .listing_grid .info_content {
     margin: 0;
     -webkit-box-shadow: 0 0 0 #ccc;
     box-shadow: 0 0 0 #ccc;
-    
+
 }
 
 body.default .listing_grid .info_content:hover {
@@ -886,7 +887,7 @@ body.default .listing_list .info_content .description .specify_btn {
     padding: 0 12px;
 }
 
-body.default .listing_list .info_content .description .specify_btn+.specify_btn {
+body.default .listing_list .info_content .description .specify_btn + .specify_btn {
     margin-left: 7px;
 }
 
@@ -935,7 +936,7 @@ body.default .listing_details .info_content .description .specify_btn.detail_pag
     display: inline-block;
 }
 
-body.default .listing_details .info_content .description .specify_btn.detail_page_specify_btn+.detail_page_specify_btn {
+body.default .listing_details .info_content .description .specify_btn.detail_page_specify_btn + .detail_page_specify_btn {
     margin-left: 10px;
 }
 
@@ -966,11 +967,11 @@ body.default .listing_details .info_content .description .feature {
     display: inline-block;
 }
 
-body.default .listing_details .info_content .description .feature+.feature {
+body.default .listing_details .info_content .description .feature + .feature {
     margin-left: 0;
 }
 
-body.default .listing_details .info_content .description .feature+.feature:hover {
+body.default .listing_details .info_content .description .feature + .feature:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1034,7 +1035,7 @@ body.default .paginationRow .pagination li a {
     font-family: 'Roboto', sans-serif;
 }
 
-body.default .paginationRow .pagination li+li {
+body.default .paginationRow .pagination li + li {
     margin-left: 7px;
 }
 
@@ -1145,16 +1146,20 @@ body.default .agent .agent_details .inner .phone_trigger {
     -webkit-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s;
 }
-.phoneNumber a{
+
+.phoneNumber a {
     color: #fff;
 }
-.phoneNumber>div:last-child{
+
+.phoneNumber > div:last-child {
     font-size: 11px;
 }
-.inner small{
-    padding-left:20px;
+
+.inner small {
+    padding-left: 20px;
 }
-.inner > div{
+
+.inner > div {
     background-color: #fff;
     margin-top: -10px;
     padding-bottom: 10px;
@@ -1656,7 +1661,7 @@ body.default footer .widget.recentPostWidget .nav li a:focus {
     color: #FFF;
 }
 
-body.default footer .widget.recentPostWidget .nav li+li {
+body.default footer .widget.recentPostWidget .nav li + li {
     border-top: 1px solid #45515a;
 }
 
@@ -1749,7 +1754,7 @@ body.default footer .copyrightRow .footSocial {
     margin: 7px 0;
 }
 
-body.default footer .copyrightRow .footSocial .nav li+li {
+body.default footer .copyrightRow .footSocial .nav li + li {
     margin-left: 10px;
 }
 
@@ -1800,7 +1805,7 @@ body.default .pageCover .page_dir ul li a {
     font-weight: 300;
 }
 
-body.default .pageCover .page_dir ul li+li:before {
+body.default .pageCover .page_dir ul li + li:before {
     margin: 0 10px;
     content: "\f0a9";
     display: inline-block;
@@ -1864,7 +1869,7 @@ body.default .sidebar .similarListing .media {
     margin-top: 0;
 }
 
-body.default .sidebar .similarListing .media+.media {
+body.default .sidebar .similarListing .media + .media {
     padding-top: 20px;
 }
 
@@ -2050,7 +2055,7 @@ body.default .comments h3 {
     color: #56616a;
 }
 
-body.default .comments .commentDisplay .comment+.comment {
+body.default .comments .commentDisplay .comment + .comment {
     margin-top: 30px;
 }
 
@@ -2222,7 +2227,7 @@ body.default .mapArea .contactInfos .nav li {
     position: relative;
 }
 
-body.default .mapArea .contactInfos .nav li+li {
+body.default .mapArea .contactInfos .nav li + li {
     border-top: 1px solid #efefef;
 }
 
@@ -2304,18 +2309,18 @@ body.default .type_switch input[type="checkbox"] {
     display: none;
 }
 
-body.default .type_switch input[type="checkbox"]+label {
+body.default .type_switch input[type="checkbox"] + label {
     cursor: pointer;
 }
 
-body.default .type_switch input[type="checkbox"]+label span {
+body.default .type_switch input[type="checkbox"] + label span {
     float: left;
     line-height: 27px;
     -webkit-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s;
 }
 
-body.default .type_switch input[type="checkbox"]+label span.indicator {
+body.default .type_switch input[type="checkbox"] + label span.indicator {
     margin: 0 15px;
     width: 57px;
     height: 27px;
@@ -2324,7 +2329,7 @@ body.default .type_switch input[type="checkbox"]+label span.indicator {
     border-radius: 25px;
 }
 
-body.default .type_switch input[type="checkbox"]+label span.indicator .switch_dot {
+body.default .type_switch input[type="checkbox"] + label span.indicator .switch_dot {
     width: 25px;
     height: 25px;
     background: #fff;
@@ -2333,19 +2338,19 @@ body.default .type_switch input[type="checkbox"]+label span.indicator .switch_do
     transition: all 300ms ease-in-out 0s;
 }
 
-body.default .type_switch input[type="checkbox"]+label span.switch_right {
+body.default .type_switch input[type="checkbox"] + label span.switch_right {
     color: rgba(86, 97, 106, 0.5);
 }
 
-body.default .type_switch input[type="checkbox"]:checked+label span.indicator .switch_dot {
+body.default .type_switch input[type="checkbox"]:checked + label span.indicator .switch_dot {
     margin-left: 30px;
 }
 
-body.default .type_switch input[type="checkbox"]:checked+label span.switch_left {
+body.default .type_switch input[type="checkbox"]:checked + label span.switch_left {
     color: rgba(86, 97, 106, 0.5);
 }
 
-body.default .type_switch input[type="checkbox"]:checked+label span.switch_right {
+body.default .type_switch input[type="checkbox"]:checked + label span.switch_right {
     color: #56616a;
 }
 
@@ -2371,7 +2376,7 @@ body.default #submit_property_form .steps ul[role="tablist"] {
     margin: 0;
 }
 
-body.default #submit_property_form .steps ul[role="tablist"] li+li {
+body.default #submit_property_form .steps ul[role="tablist"] li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
@@ -2696,14 +2701,14 @@ body.default #submit_property_form .content fieldset .checkbox_div input {
     display: none;
 }
 
-body.default #submit_property_form .content fieldset .checkbox_div input+label {
+body.default #submit_property_form .content fieldset .checkbox_div input + label {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     color: #616161;
 }
 
-body.default #submit_property_form .content fieldset .checkbox_div input+label:before {
+body.default #submit_property_form .content fieldset .checkbox_div input + label:before {
     content: '';
     width: 20px;
     height: 20px;
@@ -2712,7 +2717,7 @@ body.default #submit_property_form .content fieldset .checkbox_div input+label:b
     margin-right: 12px;
 }
 
-body.default #submit_property_form .content fieldset .checkbox_div input:checked+label:before {
+body.default #submit_property_form .content fieldset .checkbox_div input:checked + label:before {
     background-image: url('../images/checked.png');
 }
 
@@ -2862,43 +2867,49 @@ body.default #target {
     background: #e6b500;
 }
 
-.carousel-control span.fa{
-    top:50%;
-}
-.flex-next i{
-    font-size: 45px;
-    color : #000;
-    background: #ffca00;
-    display:none;
-}
-.flex-prev i{
-    font-size: 45px;
-    color : #000;
-    background: #ffca00;
-    display:none;
+.carousel-control span.fa {
+    top: 50%;
 }
 
-.cuadro{
-    background:white;
+.flex-next i {
+    font-size: 45px;
+    color: #000;
+    background: #ffca00;
+    display: none;
+}
+
+.flex-prev i {
+    font-size: 45px;
+    color: #000;
+    background: #ffca00;
+    display: none;
+}
+
+.cuadro {
+    background: white;
     padding: 25px 15px;
-    margin-left:5%;
+    margin-left: 5%;
 }
+
 .topHeader .container .row {
-   margin-left:-45px;
+    margin-left: -45px;
 }
-@media (max-width:480px){
-body.default .info_content .imageRow img {
-    height: 260px!important;
+
+@media (max-width:480px) {
+    body.default .info_content .imageRow img {
+        height: 260px !important;
+    }
 }
-}
-@media (max-width:540px){
-body.default header .topHeader .top_menu{
-  display:none;
-}
+
+@media (max-width:540px) {
+    body.default header .topHeader .top_menu {
+        display: none;
+    }
 }
 
 
-#bsiguiente, #banterior{
+#bsiguiente,
+#banterior {
     background: #f5f5f5 none repeat scroll 0 0;
     border-radius: 50%;
     color: #606060;
@@ -2908,12 +2919,32 @@ body.default header .topHeader .top_menu{
     line-height: 40px;
     text-align: center;
     width: 40px;
-  transition: 0.5s;
-  margin-bottom: 10px;
-  }
-  
-  #bsiguiente:hover, #banterior:hover{
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+#bsiguiente:hover,
+#banterior:hover {
     background: #ffca00 none repeat scroll 0 0;
     color: white;
-  }
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.no-hover {
+    background-color: transparent !important;
+    color: white;
+}
+
+.no-hover:hover,
+.no-hover:focus {
+    color: white;
+}
+
+.h-5 {
+    height: 5.5vh !important;
+}
+
 
