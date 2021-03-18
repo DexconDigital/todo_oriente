@@ -186,7 +186,9 @@
                                 </div>
                                 <div class="row m0 propertyLocation">
                                     <h4 class="location">Ubicación del inmueble</h4>
-                                    <div id="map" class="listing"></div>
+                                    <div id="mapa">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -273,9 +275,6 @@
     <!--jQuery-->
     <script src="js/jquery-2.1.3.min.js"></script>
 
-    <!--Google Map Api-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmu-UkTcheWni6_HMOKYU9x3AYP571e5s&callback=initMap" async defer></script>
-
     <!--Bootstrap JS-->
     <script src="js/bootstrap.min.js"></script>
 
@@ -294,7 +293,6 @@
 
     <!--Strella JS-->
     <script src="js/estate-pro.js"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/similar.js"></script>
     <script src="js/notices.js"></script>
 
@@ -316,7 +314,6 @@
                     );
                 },
                 success: function(data) {
-                    console.log(data)
                     if (data.msn == "Inmueble NO Disponible") {
                         modalOpen();
                         return;
@@ -340,7 +337,7 @@
                                 j++;
                             }
                         }
-                        if (data.video != "") {
+                        if (data.video != null) {
                             carrousel += '<div class="item">' +
                                 '<iframe width="auto" height="500" src="' + data.video + '" style="width:100%" ></iframe>' +
                                 '</div>';
@@ -357,15 +354,18 @@
                         autoplay: true,
                         autoplayTimeout: 4000,
                     });
-
-
+                    var color = ""
+                    var cannon = new Number(data.ValorCanon).toLocaleString("en-US");
+                    cannon = (data.Gestion == "Arriendo/venta") ? "$ " + cannon + "<br>" : '';
+                    color += (data.Gestion == "Arriendo/venta" || data.Gestion == "Arriendo/venta ") ? 'arriendo_venta' : '';
+                    color += (data.Gestion == "Arriendo" || data.Gestion == "Arriendo ") ? 'rentTag' : '';
                     $('#mycarousel').carousel();
                     $("#construccion").append("" + data.AreaConstruida);
                     $("#areal").append("Area del lote: " + data.AreaLote + " m<sup>2</sup>");
-                    $("#saleTag").append("" + data.Gestion);
+                    $("#saleTag").append(data.Gestion).addClass(color);
                     $("#habitaciones").append(" " + data.alcobas);
                     $("#banos").append(" " + data.banos);
-                    $("#precio").append("$ " + data.precio);
+                    $("#precio").append(cannon  + "$ " + data.precio);
                     $("#estrato").append("Estrato:  " + data.Estrato);
                     $("#barrio").append("Ubicación: " + data.depto + ", " + data.barrio);
                     $("#banos2").append("Baños: " + data.banos);
@@ -382,27 +382,14 @@
                     latitud = data.latitud;
                     longitud = data.longitud;
 
-                    initMap(latitud, longitud);
+                    $("#mapa").append('<iframe id="map" style="border:0;width:100%;height:30rem;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=' + latitud + ',' + longitud + '&hl=es&z=16&amp;output=embed"    ></iframe>');
+
                 },
                 error: function(data) {
                     console.log("Fail");
                 }
             });
 
-            function initMap(latitud, longitud) {
-                var uluru = {
-                    lat: parseFloat(latitud),
-                    lng: parseFloat(longitud)
-                };
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 17,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
         } else {
             modalOpen();
         }
