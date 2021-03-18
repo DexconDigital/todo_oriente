@@ -49,7 +49,6 @@ function imprimir(count) {
                     data.Inmuebles.sort(function (a, b) {
                         return parseFloat(a.valorFiltro.replace(/[^\d\.\-]/g, "")) - parseFloat(b.valorFiltro.replace(/[^\d\.\-]/g, ""));
                     });
-                    //console.log(data);
 
                     var res = " ";
 
@@ -64,19 +63,21 @@ function imprimir(count) {
                             res += '<img class="img-responsive" src="' + data.Inmuebles[pos].foto1 + '" alt="" style="width:100%">';
                         }
 
-                        if (data.Inmuebles[pos].Gestion == "Venta") {
-                            res += '<div class="saleTag">Venta</div>';
-                        } else {
-                            res += '<div class="saleTag rentTag">' + data.Inmuebles[pos].Gestion + '</div>';
-                        }
+                        var Gestion = data.Inmuebles[pos].Gestion;
+                        var dato = data.Inmuebles[pos];
+                        
+                        res += (Gestion == "Venta" || Gestion == "Venta ") ? '<div class="saleTag">' + Gestion + '</div>' : '';
+                        res += (Gestion == "Arriendo/venta" || Gestion == "Arriendo/venta ") ? '<div class="saleTag arriendo_venta">' + Gestion + '</div>' : '';
+                        res += (Gestion == "Arriendo" || Gestion == "Arriendo ") ? '<div class="saleTag rentTag">' + Gestion + '</div>' : '';
+
                         res += '</a></div>' +
                             '<div class="row m0 description">' +
                             '<div class="row m0 priceRow">';
-                        if (data.Inmuebles[pos].Gestion == "Venta") {
-                            res += '<div class="price fleft">$ ' + data.Inmuebles[pos].Venta + '</div>';
-                        } else {
-                            res += '<div class="price fleft">$ ' + data.Inmuebles[pos].Canon + '</div>';
-                        }
+
+                        res += (Gestion == "Venta" || Gestion == "Venta ") ? '<div class="price fleft">' + dato.Venta + '</div>' : '';
+                        res += (Gestion == "Arriendo/venta" || Gestion == "Arriendo/venta ") ? '<div class="price fleft">' + dato.Canon + ' / ' + dato.Venta + '</div>' : '';
+                        res += (Gestion == "Arriendo" || Gestion == "Arriendo ") ? '<div class="price fleft">' + dato.Canon + '</div>' : '';
+
                         res += '<i class="fa fa-file-text-o"></i>' +
                             '</div>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
@@ -160,6 +161,7 @@ function imprimir(count) {
                     return;
 
                 } else {
+                    console.log(data);
                     //ordenar por precio
                     data.Inmuebles.sort(function (a, b) {
                         return parseFloat(a.valorFiltro.replace(/[^\d\.\-]/g, "")) - parseFloat(b.valorFiltro.replace(/[^\d\.\-]/g, ""));
@@ -180,19 +182,22 @@ function imprimir(count) {
                                 res += '<img class="img-responsive" src="' + data.Inmuebles[pos].foto1 + '" alt="" style="width:100%">';
                             }
 
-                            if (data.Inmuebles[pos].Gestion == "Venta") {
-                                res += '<div class="saleTag">Venta</div>';
-                            } else {
-                                res += '<div class="saleTag rentTag">' + data.Inmuebles[pos].Gestion + '</div>';
-                            }
+                            var Gestion = data.Inmuebles[pos].Gestion;
+                            var dato = data.Inmuebles[pos];
+
+                            res += (Gestion == "Venta" || Gestion == "Venta ") ? '<div class="saleTag">' + Gestion + '</div>' : '';
+                            res += (Gestion == "Arriendo/venta" || Gestion == "Arriendo/venta ") ? '<div class="saleTag arriendo_venta">' + Gestion + '</div>' : '';
+                            res += (Gestion == "Arriendo" || Gestion == "Arriendo ") ? '<div class="saleTag rentTag">' + Gestion + '</div>' : '';
+
                             res += '</a></div>' +
                                 '<div class="row m0 description">' +
                                 '<div class="row m0 priceRow">';
-                            if (data.Inmuebles[pos].Gestion == "Venta") {
-                                res += '<div class="price fleft">$ ' + data.Inmuebles[pos].Venta + '</div>';
-                            } else {
-                                res += '<div class="price fleft">$ ' + data.Inmuebles[pos].Canon + '</div>';
-                            }
+
+                            res += (Gestion == "Venta" || Gestion == "Venta ") ? '<div class="price fleft">' + dato.Venta + '</div>' : '';
+                            res += (Gestion == "Arriendo/venta" || Gestion == "Arriendo/venta ") ? '<div class="price fleft">' + dato.Canon + ' / ' + dato.Venta + '</div>' : '';
+                            res += (Gestion == "Arriendo" || Gestion == "Arriendo ") ? '<div class="price fleft">' + dato.Canon + '</div>' : '';
+
+
                             res += '<i class="fa fa-file-text-o"></i>' +
                                 '</div>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
