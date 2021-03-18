@@ -469,6 +469,11 @@ body.default .info_content .imageRow .rentTag {
     background: #ff461b;
 }
 
+.arriendo_venta {
+    background: #353535 !important;
+    color: white !important;
+}
+
 body.default .info_content .description {
     background: #45515a;
     padding: 10px 30px 25px;
@@ -2959,7 +2964,10 @@ body.default #target {
 
 .w-5 {
     width: 150rem !important;
-    height: 25rem !important;
+    height: 30rem !important;
+}
+.d-flex{
+    display: flex !important;   
 }
 
 .justify-content-center {
