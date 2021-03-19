@@ -550,7 +550,7 @@ body.default .info_content .description .specify_btn {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     line-height: 40px;
-    padding: 0 15px;
+    padding: 0 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #FFF;
@@ -1831,7 +1831,7 @@ body.default .sidebar {
 body.default .sidebar .widget {
     padding: 25px;
     background: #FFF;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-left: 3px solid #ffca00;
 }
 
@@ -2934,6 +2934,15 @@ body.default #target {
     color: white;
 }
 
+
+.bg-transparent{
+    background-color: transparent !important;
+}
+
+.bg-yellow{
+    background-color: #ffca00 !important;
+}
+
 .p-0 {
     padding: 0 !important;
 }
@@ -2958,20 +2967,33 @@ body.default #target {
     color: #333;
 }
 
-.h-5 {
-    height: 5.5vh !important;
+.h-10 {
+    height: 10vh !important;
 }
 
 .w-5 {
     width: 150rem !important;
     height: 30rem !important;
 }
+
+.mt-1{
+    margin-top: 0.1rem !important;
+}
+
 .d-flex{
     display: flex !important;   
 }
 
 .justify-content-center {
     justify-content: center !important;
+}
+
+.p-6 {
+    padding: 0.54rem !important;
+}
+
+.text-white {
+    color: white !important;
 }
 
 @media (min-width: 1100px) {
@@ -2984,3 +3006,4 @@ body.default #target {
         padding-right: 0;
     }
 }
+
