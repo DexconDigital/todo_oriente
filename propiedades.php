@@ -231,13 +231,13 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
 
     <section class="contentRow">
         <div class="container">
-            <div id="propiedad" class="col-sm-12 col-md-12">
+            <div id="propiedad">
                 <div class="container">
                     <h3>Cargando...</h3>
                 </div>
             </div>
-            
-            <div class="pagination-area mb-60 col-sm-12 col-md-12">
+        </div>
+         <div class="pagination-area mb-60 col-sm-12 col-md-12">
                 <ul class="list-inline text-center">
                     <div class="pagina" style="color:black;"></div>
                     <li id="anterior" style="display:none;">
@@ -252,7 +252,6 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                     </li>
                 </ul>
             </div>
-        </div>
     </section>
 
     <!--Content Area End-->
