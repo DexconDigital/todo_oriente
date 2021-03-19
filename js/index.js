@@ -48,13 +48,15 @@ setTimeout(function () {
                     res += '<i class="fa fa-file-text-o"></i>' +
                         '</div>' +
                         '<a href="detalle-propiedad.php?dt=' + data[i].Codigo_Inmueble + '" class="location_link">' +
-                        '<h4 class="location">' + data[i].Barrio + '</h4>' +
-                        '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: ' + data[i].Codigo_Inmueble + '</h4>' +
-                        '<h4 class="location">' + data[i].Tipo_Inmueble + '</h4>' +
+                        '<h4 class="location h-10 col-sm-7 col-md-7">' + data[i].Barrio + '</h4>' +
+                        '<h4 class="location col-sm-5 col-md-5">' + 'COD: ' + data[i].Codigo_Inmueble + '</h4>' +
+                        '<h4 class="location col-sm-12 col-md-12 mt-3">' + data[i].Tipo_Inmueble + '</h4>' +
                         '</a>' +
+                        '<div class="col-sm-12 col-md-12">' +
                         '<a href="detalle-propiedad.php?dt=' + data[i].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-arrows-alt"></i>' + data[i].AreaConstruida + 'm<sup>2</sup></a>' +
                         '<a href="detalle-propiedad.php?dt=' + data[i].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bed"></i>' + data[i].Alcobas + '</a>' +
                         '<a href="detalle-propiedad.php?dt=' + data[i].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bath"></i>' + data[i].banios + '</a>' +
+                        '</div>' +
                         '</div>' +
                         '</div>' +
                         '</div>';

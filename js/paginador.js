@@ -65,7 +65,7 @@ function imprimir(count) {
 
                         var Gestion = data.Inmuebles[pos].Gestion;
                         var dato = data.Inmuebles[pos];
-                        
+
                         res += (Gestion == "Venta" || Gestion == "Venta ") ? '<div class="saleTag">' + Gestion + '</div>' : '';
                         res += (Gestion == "Arriendo/venta" || Gestion == "Arriendo/venta ") ? '<div class="saleTag arriendo_venta">' + Gestion + '</div>' : '';
                         res += (Gestion == "Arriendo" || Gestion == "Arriendo ") ? '<div class="saleTag rentTag">' + Gestion + '</div>' : '';
@@ -81,13 +81,15 @@ function imprimir(count) {
                         res += '<i class="fa fa-file-text-o"></i>' +
                             '</div>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
-                            '<h4 class="location h-5">' + data.Inmuebles[pos].Barrio + '</h4>' +
-                            '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
-                            '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
+                            '<h4 class="location h-10 col-sm-7 col-md-7">' + data.Inmuebles[pos].Barrio + '.</h4>' +
+                            '<h4 class="location col-sm-5 col-md-5">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
+                            '<h4 class="location col-sm-12 col-md-12 mt-3">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                             '</a>' +
+                            '<div class="col-sm-12 col-md-12">' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-arrows-alt"></i>' + data.Inmuebles[pos].AreaConstruida + 'm<sup>2</sup></a>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bed"></i>' + data.Inmuebles[pos].Alcobas + '</a>' +
                             '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bath"></i>' + data.Inmuebles[pos].banios + '</a>' +
+                            '</div>' +
                             '</div>' +
                             '</div>' +
                             '</div>';
@@ -201,13 +203,15 @@ function imprimir(count) {
                             res += '<i class="fa fa-file-text-o"></i>' +
                                 '</div>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="location_link">' +
-                                '<h4 class="location h-5">' + data.Inmuebles[pos].Barrio + '</h4>' +
-                                '<h4 class="location" style="margin-left: 60%;margin-top: -12%;">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
-                                '<h4 class="location">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
+                                '<h4 class="location h-10 col-sm-7 col-md-7">' + data.Inmuebles[pos].Barrio + '.</h4>' +
+                                '<h4 class="location col-sm-5 col-md-5">' + 'COD: <br/>' + data.Inmuebles[pos].Codigo_Inmueble + '</h4>' +
+                                '<h4 class="location col-sm-12 col-md-12 mt-3">' + data.Inmuebles[pos].Tipo_Inmueble + '</h4>' +
                                 '</a>' +
+                                '<div class="col-sm-12 col-md-12">' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-arrows-alt"></i>' + data.Inmuebles[pos].AreaConstruida + 'm<sup>2</sup></a>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bed"></i>' + data.Inmuebles[pos].Alcobas + '</a>' +
                                 '<a href="detalle-propiedad.php?dt=' + data.Inmuebles[pos].Codigo_Inmueble + '" class="specify_btn"><i  class="fa fa-bath"></i>' + data.Inmuebles[pos].banios + '</a>' +
+                                '</div>' +
                                 '</div>' +
                                 '</div>' +
                                 '</div>';
