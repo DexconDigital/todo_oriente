@@ -31,7 +31,6 @@
         success: function (data) {
             var res = "";
             var j = 0;
-            console.log(data);
             for (var i = 0; i < data.totalPagina; i++) {
                 if (data[i].Codigo_Inmueble != localStorage.codigo) {
                     res += '<div class="col-sm-12 p-6">' +
