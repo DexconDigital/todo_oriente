@@ -549,8 +549,8 @@ body.default .info_content .description h4.location {
 body.default .info_content .description .specify_btn {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    line-height: 40px;
-    padding: 0 12px;
+    line-height: 22px;
+    padding: 0 7px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #FFF;
@@ -2968,7 +2968,7 @@ body.default #target {
 }
 
 .h-10 {
-    height: 10vh !important;
+    height: 10rem !important;
 }
 
 .w-5 {

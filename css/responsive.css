@@ -288,6 +288,8 @@ body.default .m0 {
     body.light .info_content .description {
         padding: 0 15px 15px;
     }
+    
+
 
     body.default .info_content .description h4.location,
     body.light .info_content .description h4.location {
@@ -409,6 +411,10 @@ body.default .m0 {
     body.light #mainSlider .flex-direction-nav li.flex-nav-prev {
         right: auto;
         border-right: 1px solid #ffca00;
+    }
+    
+    .h-10 {
+        height: 1em !important;
     }
 }
 
