@@ -182,14 +182,16 @@ $link = mysqli_connect("50.62.209.73:3306","todooriente_user","nosequeponer123",
     <!--Another Common Area-->
     <section class="row pt70 footerBanner">
         <div class="row m0 inner">
-            <div class="container">
+            <div class="container bg-transparent">
                 <div class="row">
                     <img src="images/foot-brand.png" alt="footer banner" class="img-responsive fleft property">
-                    <div class="fleft banner_texts">
-                        <h2>Venda <span>o</span> Arriende</h2>
-                        <h3>Su Inmueble</h3>
+                    <div class="casa_contacto">
+                        <div class="fleft banner_texts">
+                            <h2>Venda <span>o</span> Arriende</h2>
+                            <h3>Su Inmueble</h3>
+                        </div>
+                        <a href="contacto.html" class="btn_contacto sell_rent_link fright">Contáctenos</a>
                     </div>
-                    <a href="contacto.html" class="sell_rent_link fright">Contáctenos</a>
                 </div>
             </div>
         </div>

@@ -196,9 +196,14 @@
                     <!--Grid Listing-->
                 </div>
                 <div class="col-sm-4 sidebar">
-                    <div class="row m0 widget similarListing">
-                        <h4>Propiedades similares</h4>
+                    <div class="row m0 widget bg-yellow">
+                        <h4 class="text-white">Propiedades similares</h4>
+                        <div id="sugerencias"></div>
                     </div>
+                    <div id="sugerencias">
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -209,14 +214,16 @@
     <!--Another Common Area-->
     <section class="row pt70 footerBanner">
         <div class="row m0 inner">
-            <div class="container">
+            <div class="container bg-transparent">
                 <div class="row">
                     <img src="images/foot-brand.png" alt="footer banner" class="img-responsive fleft property">
-                    <div class="fleft banner_texts">
-                        <h2>Venda <span>o</span> Arriende</h2>
-                        <h3>Su Inmueble</h3>
+                    <div class="casa_contacto">
+                        <div class="fleft banner_texts">
+                            <h2>Venda <span>o</span> Arriende</h2>
+                            <h3>Su Inmueble</h3>
+                        </div>
+                        <a href="contacto.html" class="btn_contacto sell_rent_link fright">Contáctenos</a>
                     </div>
-                    <a href="contacto.html" class="sell_rent_link fright">Contáctenos</a>
                 </div>
             </div>
         </div>
@@ -293,13 +300,12 @@
 
     <!--Strella JS-->
     <script src="js/estate-pro.js"></script>
-    <script src="js/similar.js"></script>
+
     <script src="js/notices.js"></script>
 
     <?php echo "<script> var codigoInm ='" . $codigo . "';</script>"; ?>
     <script>
         if (codigoInm != 0) {
-
             var latitud = 0;
             var longitud = 0;
             $.ajax({
@@ -365,7 +371,7 @@
                     $("#saleTag").append(data.Gestion).addClass(color);
                     $("#habitaciones").append(" " + data.alcobas);
                     $("#banos").append(" " + data.banos);
-                    $("#precio").append(cannon  + "$ " + data.precio);
+                    $("#precio").append(cannon + "$ " + data.precio);
                     $("#estrato").append("Estrato:  " + data.Estrato);
                     $("#barrio").append("Ubicación: " + data.depto + ", " + data.barrio);
                     $("#banos2").append("Baños: " + data.banos);
@@ -376,14 +382,14 @@
 
                     window.localStorage.setItem("codigo", data.idInm)
                     window.localStorage.setItem("gestion", data.Gestion)
-
+                    window.localStorage.setItem("Tipo_Inmueble", data.Tipo_Inmueble)
                     $("#ubicacion").append(data.barrio + ", " + data.ciudad + ", " + data.depto);
 
                     latitud = data.latitud;
                     longitud = data.longitud;
 
                     $("#mapa").append('<iframe id="map" style="border:0;width:100%;height:30rem;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=' + latitud + ',' + longitud + '&hl=es&z=16&amp;output=embed"    ></iframe>');
-
+                    $("#similarjs").append('<script src="js/similar.js"></' + 'script>');
                 },
                 error: function(data) {
                     console.log("Fail");
@@ -421,6 +427,7 @@
         }
 
     </script>
+    <div id="similarjs"></div>
 </body>
 
 </html>

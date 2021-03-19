@@ -94,11 +94,10 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
 
 <body class="default" onload="imprimir(1)">
 
-    <header class="row">
-        <div class="row m0 topHeader">
+    <header>
+        <div class="topHeader">
             <div class="container">
                 <div class="row">
-
                     <div class="col-md-2 social_menu">
                         <h5 style="font-family: 'Roboto', sans-serif; color:#676767; font-size:15px; text-align:center">INMOBILIARIA TODO ORIENTE S.A.S.</h5>
                     </div>
@@ -155,9 +154,9 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     </header>
     <!--Header End-->
 
-    <section class="row pageCover">
+    <section class=" pageCover">
         <div class="container">
-            <div class="row m0">
+            <div class=" ">
                 <div class="fleft page_name">Inmuebles</div>
                 <div class="fright page_dir">
                     <ul class="list-inline">
@@ -169,7 +168,7 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
         </div>
     </section>
 
-    <section class="row">
+    <section>
         <div class="container">
             <div class="searchForm media" style="margin-top:15px">
                 <div class="formTitle media-left media-middle"><span>Busca </span><br>Tu inmueble</div>
@@ -230,32 +229,28 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     </section>
     <!--Search Form-->
 
-    <section class="row contentRow">
+    <section class="contentRow">
         <div class="container">
-            <div class="row">
-                <!--Catálogos-->
-                <div id="propiedad" class="row">
-                    <div class="container">
-                        <h3>Cargando...</h3>
-                    </div>
+            <div id="propiedad" class="col-sm-12 col-md-12">
+                <div class="container">
+                    <h3>Cargando...</h3>
                 </div>
-                <!--Catálogos-->
-                <div class="pagination-area mb-60">
-                    <ul class="list-inline text-center">
-                        <div class="pagina" style="color:black;"></div>
-                        <li id="anterior" style="display:none;">
-                            <a href="#" id="banterior" onclick="paginator('ant')">
-                                <i class="fa fa-angle-left" aria-hidden="true" id="flechas"></i>
-                            </a>
-                        </li>
-                        <li id="siguiente" style="display:none;">
-                            <a href="#" id="bsiguiente" onclick="paginator('sig')">
-                                <i class="fa fa-angle-right" aria-hidden="true" id="flechas"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+            </div>
+            
+            <div class="pagination-area mb-60 col-sm-12 col-md-12">
+                <ul class="list-inline text-center">
+                    <div class="pagina" style="color:black;"></div>
+                    <li id="anterior" style="display:none;">
+                        <a href="#" id="banterior" onclick="paginator('ant')">
+                            <i class="fa fa-angle-left" aria-hidden="true" id="flechas"></i>
+                        </a>
+                    </li>
+                    <li id="siguiente" style="display:none;">
+                        <a href="#" id="bsiguiente" onclick="paginator('sig')">
+                            <i class="fa fa-angle-right" aria-hidden="true" id="flechas"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -263,26 +258,28 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
     <!--Content Area End-->
 
     <!--Another Common Area-->
-    <section class="row pt70 footerBanner">
-        <div class="row m0 inner">
-            <div class="container">
-                <div class="row">
+    <section class="pt70 footerBanner">
+        <div class="  inner">
+            <div class="container bg-transparent">
+                <div class="">
                     <img src="images/foot-brand.png" alt="footer banner" class="img-responsive fleft property">
-                    <div class="fleft banner_texts">
-                        <h2>Venda <span>o</span> Arriende</h2>
-                        <h3>Su Inmueble</h3>
+                    <div class="casa_contacto">
+                        <div class="fleft banner_texts">
+                            <h2>Venda <span>o</span> Arriende</h2>
+                            <h3>Su Inmueble</h3>
+                        </div>
+                        <a href="contacto.html" class="btn_contacto sell_rent_link fright">Contáctenos</a>
                     </div>
-                    <a href="contacto.html" class="sell_rent_link fright">Contáctenos</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="row">
+    <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4 widget recentPostWidget">
-                    <div class="row m0 widgetInner">
+            <div>
+                <div class="col-sm-6 col-md-6 col-lg-4 widget recentPostWidget">
+                    <div class="  widgetInner">
                         <h4 class="widgetTitle">Últimas Noticias</h4>
                         <ul class="nav" id="ulti-noticias2">
                             <li><a href="single-post.html">New Search Platform Update</a></li>
@@ -292,8 +289,8 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4 widget aboutWidget">
-                    <div class="row m0 widgetInner">
+                <div class="col-sm-6 col-md-6 col-lg-4 widget aboutWidget">
+                    <div class="  widgetInner">
                         <a href="index.html"><img src="images/logos/footer.png" alt=""></a>
                         <p> Somos un equipo de trabajo profesional con
                             vocación de servicio al cliente. Desde 2016
@@ -302,19 +299,19 @@ if (isset($_GET["gs"]) && isset($_GET["ti"]) && isset($_GET["ci"]) && isset($_GE
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-4 widget oppeningHoursWidget">
-                    <div class="row m0 widgetInner">
+                <div class="col-sm-6 col-md-6 col-lg-4 widget oppeningHoursWidget">
+                    <div class="  widgetInner">
                         <h4 class="widgetTitle">Contáctenos</h4>
                         <ul class="nav">
                             <li>Llámenos</li>
-                            <li><a class="p-0 no-hover text-light" href="tel:0345577902" >(034) 557 79 02</a></li>
+                            <li><a class="p-0 no-hover text-light" href="tel:0345577902">(034) 557 79 02</a></li>
                             <li>Envíenos un correo</li>
                             <li><a class="p-0 no-hover text-light" href="mailto:gerencia@inmobiliariatodooriente.com">gerencia@inmobiliariatodooriente.com</a></li>
                         </ul>
                     </div>
-                </div> 
+                </div>
             </div>
-            <div class="copyrightRow row">
+            <div class="copyrightRow">
                 <center>
                     <div class="col-sm-12 copyright">© 2018 <a href="http://www.dexcondigital.com/" target="_blank">Dexcon Digital</a>, Todos los derechos reservados</div>
                 </center>
