@@ -9,7 +9,7 @@ require_once("conexion.php"); ?>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html">
 <title>Todo Oriente</title>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="shortcut icon" href="../images/favicon.png" />

@@ -8,7 +8,7 @@ require_once("conexion.php"); ?>
 <!DOCTYPE HTML>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html">
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Todo Oriente</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
